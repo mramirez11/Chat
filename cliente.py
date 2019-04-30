@@ -72,7 +72,8 @@ def descifradoAsimetrico(encrypted_message):
 # Creamos socket TCP
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 # Socket con puerto en escucha
-server_address = ('localhost', 10000)
+msg=input("Ingrese direccion del servidor\n")
+server_address = (msg, 10000)
 print('Conectado a {} puerto {}'.format(*server_address))
 sock.connect(server_address)
 condConexion=True
